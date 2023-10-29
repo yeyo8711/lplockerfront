@@ -142,7 +142,7 @@ const ViewOneLock = () => {
             <div className='flex w-full justify-center mt-5 gap-3'>
               <span>Uniswap V2 pair:</span>
               <CopyToClipboard
-                text={`${baseURL}/viewOneLock/${tokenInfo.lpAddress}`}
+                text={`https://lplockerfront.onrender.com/viewOneLock/${tokenInfo.lpAddress}`}
                 onCopy={changeCopied}
                 className='cursor-pointer flex items-center gap-2'>
                 <span className='flex gap-2 items-center'>
