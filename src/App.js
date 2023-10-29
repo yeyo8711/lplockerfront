@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import useStore from "./store";
+import "./input.css";
+import axios from "axios";
+import Header from "./components/Header";
+import Homepage from "./components/HomePage";
+import Footer from "./components/Footer";
 
 function App() {
+  const { baseURL } = useStore();
+
+  useEffect(() => {
+    const refresh = async () => {
+      await axios
+        .get(`${baseURL}/refresh`)
+        .then((response) => console.log(response));
+    };
+    refresh();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path='/viewOneLock/:address' component={Homepage} />
+        <Route path='/' component={Homepage} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
