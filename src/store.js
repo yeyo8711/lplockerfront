@@ -4,7 +4,7 @@ const useStore = create((set) => ({
   walletAddress: "0x00000000000000000000000000",
   defaultProvider: "https://rpc.ankr.com/eth",
   baseURL: "https://lplockerserver.onrender.com",
-  frontURL: "",
+  frontURL: "https://lp-locker-dapp.onrender.com",
   isConnected: false,
   signer: "",
   lockerContract: "",
