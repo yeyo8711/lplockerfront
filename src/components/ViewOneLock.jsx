@@ -41,7 +41,6 @@ const ViewOneLock = () => {
   }, [address]);
 
   const search = async (lpAddress) => {
-    console.log(lpAddress);
     if (lpAddress?.length !== 42) {
       setLpAddress(null);
       return;
@@ -56,6 +55,7 @@ const ViewOneLock = () => {
         })
         .then((res) => {
           setTokenInfo(res.data.data);
+          console.log(res.data.data);
           setAllLocks(res.data.locks);
           setLoading(false);
           if (
@@ -172,7 +172,7 @@ const ViewOneLock = () => {
                 Locked Liquidity
               </span>
               <span className='text-center text-[30px] font-bold'>
-                {totalLocked} %
+                {Number(tokenInfo.lpTotalLocked)} %
               </span>
 
               <div className='flex items-center justify-between mt-5'>
