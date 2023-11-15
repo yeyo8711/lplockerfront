@@ -4,9 +4,10 @@ import { ethers } from "ethers";
 import lockerContractABI from "../ABIs";
 import Swal from "sweetalert2";
 import ReactLoading from "react-loading";
+import axios from "axios";
 
 const WithdrawLock = () => {
-  const { walletAddress, provider, lockerContract } = useStore();
+  const { walletAddress, provider, lockerContract, baseURL } = useStore();
 
   const [myLocks, setMyLocks] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -21,12 +22,20 @@ const WithdrawLock = () => {
         )
       );
       let arr = [];
+      let arr2 = [];
       if (totalLocks === 0) {
         setLoading(false);
         return;
       }
       for (let i = 0; i < totalLocks; i++) {
         const lock = await lockerContract.viewLock(walletAddress, i);
+        arr2.push({
+          owner: lock[0],
+          lpAddress: lock[1],
+          lockedAt: lock[2],
+          amount: lock[3],
+          unlocksAt: lock[4],
+        });
         const {
           token0Name,
           token1Name,
@@ -59,11 +68,22 @@ const WithdrawLock = () => {
         });
       }
       setMyLocks(arr);
+      updateDB(arr2);
       setLoading(false);
     };
     fetch();
     // eslint-disable-next-line
   }, []);
+
+  const updateDB = async (arr) => {
+    try {
+      await axios.get(`${baseURL}/refreshdb`, {
+        params: { arr },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const fetchAndFormat = async (lock) => {
     const pair = new ethers.Contract(

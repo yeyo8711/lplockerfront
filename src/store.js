@@ -2,8 +2,9 @@ import { create } from "zustand";
 
 const useStore = create((set) => ({
   walletAddress: "0x00000000000000000000000000",
-  defaultProvider: "https://rpc.ankr.com/eth_goerli",
+  defaultProvider: "https://rpc.ankr.com/eth",
   baseURL: "https://lplockerserver.onrender.com",
+  frontURL: "",
   isConnected: false,
   signer: "",
   lockerContract: "",
@@ -18,6 +19,7 @@ const useStore = create((set) => ({
   viewAllLocks: false,
   viewOneLock: false,
   updateSigner: (state) => set({ signer: state }),
+  updateFrontURL: (state) => set({ frontURL: state }),
   setIsConnected: (state) => set({ isConnected: state }),
   setWalletAddress: (state) => set({ walletAddress: state }),
   updateLockerContract: (state) => set({ lockerContract: state }),

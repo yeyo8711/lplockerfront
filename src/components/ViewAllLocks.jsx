@@ -104,7 +104,7 @@ const ViewAllLocks = () => {
               return (
                 <div
                   key={index}
-                  className='flex flex-col md:flex-row justify-between p-2 rounded m-1 bg-[#dfe4ec]'>
+                  className='flex flex-col md:flex-row justify-between p-2 border-[1px] border-y-emerald-50 rounded m-1 bg-[#dfe4ec] shadow-md'>
                   <div className='flex flex-col p-2 md:w-1/4'>
                     <span className='flex justify-center font-bold'>Pair</span>
                     <span>

@@ -1,11 +1,21 @@
 const lockerContractABI = {
-  address: "0xf41C28fbbF26fD7642F6A8132cB0DF3edd341b78",
+  address: "0x38C3cc891a1304f33aC6B3AfB1656c9bC55088dB",
   ABI: [
     {
       inputs: [
         {
           internalType: "address",
           name: "initialOwner",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "_taxRecipient1",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "_taxRecipient2",
           type: "address",
         },
       ],
@@ -99,7 +109,7 @@ const lockerContractABI = {
         },
         {
           internalType: "uint256",
-          name: "_newFeePercent",
+          name: "_newFeePercentLP",
           type: "uint256",
         },
       ],
@@ -111,8 +121,31 @@ const lockerContractABI = {
     {
       inputs: [
         {
+          internalType: "uint256",
+          name: "_split1",
+          type: "uint256",
+        },
+        {
+          internalType: "uint256",
+          name: "_split2",
+          type: "uint256",
+        },
+      ],
+      name: "changeSplit",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
           internalType: "address",
-          name: "_newTaxRecipient",
+          name: "_newTaxRecipient1",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "_newTaxRecipient2",
           type: "address",
         },
       ],
@@ -237,6 +270,24 @@ const lockerContractABI = {
       name: "renounceOwnership",
       outputs: [],
       stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [],
+      name: "split",
+      outputs: [
+        {
+          internalType: "uint256",
+          name: "split1",
+          type: "uint256",
+        },
+        {
+          internalType: "uint256",
+          name: "split2",
+          type: "uint256",
+        },
+      ],
+      stateMutability: "view",
       type: "function",
     },
     {

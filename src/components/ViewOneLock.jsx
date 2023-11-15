@@ -21,7 +21,7 @@ import { useParams } from "react-router-dom";
 
 const ViewOneLock = () => {
   const { address } = useParams();
-  const { baseURL } = useStore();
+  const { baseURL, frontURL } = useStore();
   const [lpAddress, setLpAddress] = useState();
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -142,7 +142,7 @@ const ViewOneLock = () => {
             <div className='flex w-full justify-center mt-5 gap-3'>
               <span>Uniswap V2 pair:</span>
               <CopyToClipboard
-                text={`https://lplockerfront.onrender.com/viewOneLock/${tokenInfo.lpAddress}`}
+                text={`${frontURL}/viewOneLock/${tokenInfo.lpAddress}`}
                 onCopy={changeCopied}
                 className='cursor-pointer flex items-center gap-2'>
                 <span className='flex gap-2 items-center'>

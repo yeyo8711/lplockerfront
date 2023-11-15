@@ -8,13 +8,13 @@ import Homepage from "./components/HomePage";
 import Footer from "./components/Footer";
 
 function App() {
-  const { baseURL } = useStore();
+  const { baseURL, updateFrontURL } = useStore();
 
   useEffect(() => {
     const refresh = async () => {
       await axios
         .get(`${baseURL}/refresh`)
-        .then((response) => console.log(response));
+        .then((response) => updateFrontURL(response.data.url));
     };
     refresh();
   }, []);

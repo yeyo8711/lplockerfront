@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useStore from "../store";
 import { ethers } from "ethers";
 import lockerContractABI from "../ABIs";
@@ -24,7 +24,7 @@ function Header() {
         "any"
       );
       const network = await provider.getNetwork();
-      if (network.chainId !== 5) {
+      if (network.chainId !== 1) {
         Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -32,7 +32,7 @@ function Header() {
         });
         await window.ethereum.request({
           method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0x5" }], // 0x3 is the chain ID for Ropsten
+          params: [{ chainId: "0x1" }], // 0x3 is the chain ID for Ropsten
         });
         provider.on("network", (newNetwork, oldNetwork) => {
           // When a Provider makes its initial connection, it emits a "network"
