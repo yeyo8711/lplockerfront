@@ -53,29 +53,53 @@ const Homepage = () => {
     RenderComponent = ViewOneLock;
   }
   return (
-    <div className='flex flex-col items-center justify-start  bg-storm p-6 min-h-[90vh]'>
-      <div className='flex items-center mb-5 bg-[#E9EEF2] '>
+    <div className='flex flex-col items-center justify-start  bg-storm p-6 min-h-[90vh] mt-10'>
+      <div
+        className='flex items-center mb-5 '
+        style={{ backgroundImage: "url(background)" }}>
         <img src={UniswapLogo} alt='logo' className='h-10 w-10' />
         Uniswap v2 Liquidity Locker
       </div>
-      <div className='flex justify-between items-center border-4 p-4 rounded-lg bg-[#E9EEF2]'>
+      <div class=' flex gap-8 justify-center items-center'>
         <button
-          className='px-4 py-2 m-2 rounded bg-green-500 text-white hover:bg-green-600 transition duration-300 '
+          class='leading-none text-base no-underline font-normal flex  justify-center items-center gap-2 w-1/2 rounded-full p-3 text-[#020019]'
+          style={{
+            height: "70%",
+            background:
+              "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+            boxshadow: "#4c6b9b 0 -12px 6px inset",
+            color: "#020019",
+          }}
           onClick={() => newLockClicked("newLock")}>
-          New Lock
+          New
+          <br /> Lock
         </button>
         <button
-          className='px-4 py-2 m-2 rounded bg-blue-500 text-white hover:bg-blue-600 transition duration-300 '
+          class='leading-none text-base no-underline font-normal flex justify-center items-center gap-2 w-1/2 rounded-full p-3'
+          style={{
+            height: "70%",
+            background:
+              "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+            boxshadow: "#4c6b9b 0 -12px 6px inset",
+            color: "#020019",
+          }}
           onClick={() => newLockClicked("withdrawLock")}>
           Withdraw Lock
         </button>
-        <button
+        {/*   <button
           className='px-4 py-2 m-2 rounded bg-zinc-500 text-white hover:bg-zinc-600 transition duration-300 '
           onClick={() => newLockClicked("viewAllLocks")}>
           View All Locks
-        </button>
+        </button> */}
         <button
-          className='px-4 py-2 m-2 rounded bg-teal-500 text-white hover:bg-teal-600 transition duration-300 '
+          class='leading-none text-base no-underline font-normal flex justify-center items-center gap-2 w-1/2 rounded-full p-3'
+          style={{
+            height: "70%",
+            background:
+              "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+            boxshadow: "#4c6b9b 0 -12px 6px inset",
+            color: "#020019",
+          }}
           onClick={() => newLockClicked("viewOneLock")}>
           Search For Lock
         </button>

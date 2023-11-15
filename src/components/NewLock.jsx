@@ -87,11 +87,11 @@ function NewLock() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center max-h-screen'>
+    <div className='flex flex-col items-center justify-center max-h-screen mt-5'>
       <div className='bg-jean p-6 rounded-md flex flex-col'>
         Enter the Uniswap V2 pair address youd like to lock liquidity for
         <input
-          className='border-lavender p-2 mt-2 rounded'
+          className='border-lavender p-2 mt-2 rounded text-slate-950 text-center'
           placeholder='e.g 0x55F558D1a265AC31181D45Ad6B2052CD67eC8ABf'
           value={address}
           onChange={(e) => setAddress(e.target.value)}
@@ -107,16 +107,23 @@ function NewLock() {
           />
         </div>
       ) : pairFound ? (
-        <div className='flex flex-col w-full rounded border-4 bg-[#E9EEF2] p-4'>
-          <div className='text-2xl m-2'>Pair Found</div>
+        <div className='flex flex-col w-full rounded border-4 bg-[#E9EEF2] p-4 text-slate-950'>
+          <div className='text-2xl m-2 text-slate-950'>Pair Found</div>
           <div className='flex justify-between m-2'>
-            <div>
+            <div className='text-slate-950'>
               {token0Name} / {token1Name}
             </div>
-            <div>{lpBalance}</div>
+            <div className='text-slate-950'>{lpBalance}</div>
           </div>
           <button
-            className='px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600 transition duration-300 m-2'
+            className='px-4 py-2 rounded hover: text-white  transition duration-300 m-2 '
+            style={{
+              height: "70%",
+              background:
+                "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+              boxshadow: "#4c6b9b 0 -12px 6px inset",
+              color: "#020019",
+            }}
             onClick={() => continueWithLock()}>
             CONTINUE
           </button>

@@ -5,6 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import Datepicker from "react-tailwindcss-datepicker";
 import lockerContractABI from "../ABIs";
 import Swal from "sweetalert2";
+import bgImage from "../assets/img/body_background.jpg";
 
 function TokenInfo() {
   const {
@@ -213,27 +214,36 @@ function TokenInfo() {
   };
 
   return (
-    <div className='flex flex-colitems-center justify-center min-h-fit bg-[#E9EEF2]'>
+    <div className='flex flex-colitems-center justify-center min-h-fit '>
       <div className='bg-[#dfe4ec] p-6 mt-4 rounded-md'>
         <div className='m-2 cursor-pointer'>
           <FaArrowLeft onClick={() => goBack()} />
         </div>
-        <div className='flex items-center justify-center text-3xl'>
+        <div className='flex items-center justify-center text-3xl text-slate-950'>
           {token0Name ? token0Name : ""} / {token1Name ? token1Name : ""}
         </div>
-        <div className='flex items-center justify-center text-xl font-bold	 my-5'>
+        <div className='flex items-center justify-center text-xl font-bold	text-slate-950 my-5'>
           Lock how many LP tokens?
         </div>
-        <div className='bg-[#E9EEF2] border-2 rounded-md p-3 m-3'>
-          <p className='text-soft-grey flex justify-end text-xs bg-[#E9EEF2]'>
+        <div
+          className='bg-[#E9EEF2] border-2 rounded-md p-3 m-3'
+          style={{ backgroundImage: `url(${bgImage})` }}>
+          <p className='text-soft-grey flex justify-end text-xs '>
             Balance: {balance ? balance : 0}
           </p>
-          <div className='flex justify-between items-center m-4 bg-[#F5F7F9] rounded p-2'>
+          <div className='flex justify-between items-center m-4   rounded p-2 '>
             <div>{amount ? amount : 0}</div>
-            <div className='flex justify-end items-center ml-4'>
+            <div className='flex justify-end items-center ml-4 '>
               {name}
               <button
-                className='px-4 py-2 ml-2 rounded bg-green-500 text-white hover:bg-green-600 transition duration-300 '
+                className='px-4 py-2 ml-2 rounded bg-green-500 hover:bg-green-600 transition duration-300  '
+                style={{
+                  height: "70%",
+                  background:
+                    "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+                  boxshadow: "#4c6b9b 0 -12px 6px inset",
+                  color: "#020019",
+                }}
                 onClick={() => setAmount(balance)}>
                 MAX
               </button>
@@ -242,32 +252,62 @@ function TokenInfo() {
           <div>
             <button
               className='bg-[#E9EEF2] border-2 rounded-md p-2 text-xs'
+              style={{
+                height: "70%",
+                background:
+                  "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+                boxshadow: "#4c6b9b 0 -12px 6px inset",
+                color: "#020019",
+              }}
               onClick={() => setAmount(balance * 0.25)}>
               25%
             </button>
             <button
               className='bg-[#E9EEF2] border-2 rounded-md p-2 text-xs'
+              style={{
+                height: "70%",
+                background:
+                  "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+                boxshadow: "#4c6b9b 0 -12px 6px inset",
+                color: "#020019",
+              }}
               onClick={() => setAmount(balance * 0.5)}>
               50%
             </button>
             <button
               className='bg-[#E9EEF2] border-2 rounded-md p-2 text-xs'
+              style={{
+                height: "70%",
+                background:
+                  "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+                boxshadow: "#4c6b9b 0 -12px 6px inset",
+                color: "#020019",
+              }}
               onClick={() => setAmount(balance * 0.75)}>
               75%
             </button>
             <button
               className='bg-[#E9EEF2] border-2 rounded-md p-2 text-xs'
+              style={{
+                height: "70%",
+                background:
+                  "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+                boxshadow: "#4c6b9b 0 -12px 6px inset",
+                color: "#020019",
+              }}
               onClick={() => setAmount(balance)}>
               100%
             </button>
           </div>
         </div>
-        <div className='flex items-center justify-center text-xl font-bold	 my-5'>
+        <div className='flex items-center justify-center text-xl font-bold	text-slate-950 my-5'>
           Unlock Date
         </div>
-        <div className='bg-[#E9EEF2] border-2 rounded-md p-3 m-3'>
+        <div
+          className='bg-[#E9EEF2] border-2 rounded-md p-3 m-3'
+          style={{ backgroundImage: `url(${bgImage})` }}>
           <div className='max-w-fit m-2'>
-            <div className='flex flex-col justify-between items-center m-4 bg-[#F5F7F9] rounded p-2'>
+            <div className='flex flex-col justify-between items-center m-4 bg-[#F5F7F9] rounded p-2 text-slate-950'>
               (All locks end at 0 UTC)
               <Datepicker
                 value={value}
@@ -282,18 +322,20 @@ function TokenInfo() {
           </div>
           <div className='flex justify-center items-center'>{difference}</div>
         </div>
-        <div className='flex items-center justify-center text-xl font-bold	 my-5'>
+        <div className='flex items-center justify-center text-xl font-bold	text-slate-950 my-5'>
           Fee Options
         </div>
         <div className='bg-[#E9EEF2] border-2 rounded-md p-3 m-3'>
           <div className='flex flex-1 justify-center items-center m-2 bg-[#F5F7F9] rounded p-2'>
-            <button className='px-4 py-2 w-full h-full rounded bg-green-500 text-white hover:bg-green-600 transition duration-300 '>
+            <button
+              className='px-4 py-2 w-full h-full rounded transition duration-300 '
+              style={{ backgroundImage: `url(${bgImage})` }}>
               0.05 ETH + 1%
             </button>
           </div>
         </div>
         <div className='flex items-center justify-center text-m  my-5'>
-          <p className='flex flex-col max-w-sm'>
+          <p className='flex flex-col max-w-sm text-slate-950'>
             Once tokens are locked they cannot be withdrawn under any
             circumstances until the timer has expired. Please ensure the
             parameters are correct, as they are final.
@@ -301,24 +343,36 @@ function TokenInfo() {
         </div>
         <div className='p-4 flex'>
           <button
-            className={`flex-1 px-4 py-2 rounded ${
+            className={`flex-1 px-4 py-2 rounded text-slate-950 ${
               hasEnoughETH && finalUnixtimestamp && amount
-                ? "bg-green-500"
+                ? "bg-custom-gradient"
                 : "bg-gray-400"
             } text-white`}
             disabled={!hasEnoughETH && !finalUnixtimestamp && !amount}
+            style={{
+              height: "70%",
+
+              boxshadow: "#4c6b9b 0 -12px 6px inset",
+              color: "#020019",
+            }}
             onClick={() => approve()}>
             Approve
           </button>
           <button
-            className={`flex-1 px-4 py-2 rounded ml-2 ${
+            className={`flex-1 px-4 py-2 rounded ml-2 text-slate-950 ${
               hasEnoughETH && finalUnixtimestamp && amount && allowance
-                ? "bg-green-500"
+                ? "bg-custom-gradient"
                 : "bg-gray-400"
             } text-white`}
             disabled={
               !hasEnoughETH || !finalUnixtimestamp || !amount || !allowance
             }
+            style={{
+              height: "70%",
+
+              boxshadow: "#4c6b9b 0 -12px 6px inset",
+              color: "#020019",
+            }}
             onClick={() => lock()}>
             Lock
           </button>

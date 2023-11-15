@@ -108,12 +108,12 @@ const ViewOneLock = () => {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center h-full w-screen'>
+    <div className='flex flex-col justify-center items-center h-full my-10'>
       <div className='w-full max-w-lg flex justify-center items-center m-2'>
         <input
           type='text'
           placeholder='Search...'
-          className='flex-1 p-2 border rounded-l-md focus:outline-none focus:border-blue-500'
+          className='flex-1 p-2 border rounded-l-md focus:outline-none focus:border-blue-500 text-slate-950 text-center'
           onChange={(e) => setLpAddress(e.target.value)}
         />
         <button
@@ -142,7 +142,7 @@ const ViewOneLock = () => {
             <div className='flex w-full justify-center mt-5 gap-3'>
               <span>Uniswap V2 pair:</span>
               <CopyToClipboard
-                text={`${frontURL}/viewOneLock/${tokenInfo.lpAddress}`}
+                text={`https://lp-locker-dapp.onrender.com/viewOneLock/${tokenInfo.lpAddress}`}
                 onCopy={changeCopied}
                 className='cursor-pointer flex items-center gap-2'>
                 <span className='flex gap-2 items-center'>

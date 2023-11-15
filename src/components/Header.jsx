@@ -73,16 +73,23 @@ function Header() {
   };
 
   return (
-    <div className='w-full bg-[#F5F7F9] p-4 shadow-md'>
+    <div className='w-full p-4 '>
       <div className='flex justify-between items-center mx-auto'>
         <h1 className='text-2xl text-soft-grey'>Liquidity Locker</h1>
         {isConnected ? (
-          <span className='text-soft-grey bg-jean p-2 rounded-md'>
+          <span className='text-slate-950 bg-jean p-2 rounded-md bg-custom-gradient'>
             {walletAddress.slice(-8)}
           </span>
         ) : (
           <button
-            className='bg-[#E9EEF2] text-soft-grey p-3 rounded-md hover:bg-[#b5b8bb]'
+            className=' text-soft-grey p-3 rounded-md hover:bg-[#b5b8bb]'
+            style={{
+              height: "70%",
+              background:
+                "linear-gradient(#fafbff 0%, #91bcf7 80%, #43567e 100%)",
+              boxshadow: "#4c6b9b 0 -12px 6px inset",
+              color: "#020019",
+            }}
             onClick={() => {
               connect();
             }}>

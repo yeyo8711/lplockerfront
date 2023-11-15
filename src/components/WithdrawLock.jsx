@@ -190,9 +190,9 @@ const WithdrawLock = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-fit bg-[#E9EEF2]'>
+    <div className='flex flex-col items-center justify-center min-h-fit bg-[#E9EEF2] mt-10'>
       <div className='bg-[#dfe4ec] p-6 mt-4 rounded-md w-full max-w-4xl'>
-        <div className='flex items-center justify-center text-xl font-bold my-5'>
+        <div className='flex items-center justify-center text-xl font-bold my-5 text-slate-950'>
           My Locker
         </div>
         <div className='bg-[#E9EEF2]  border-2 rounded-md p-3 m-3 '>
@@ -277,7 +277,7 @@ const WithdrawLock = () => {
               );
             })
           ) : (
-            <div>YOU HAVE NO LOCKED LIQUIDITY</div>
+            <div className='text-slate-950 '>YOU HAVE NO LOCKED LIQUIDITY</div>
           )}
         </div>
       </div>
