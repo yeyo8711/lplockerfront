@@ -4,11 +4,11 @@ import { FaTelegram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className='flex items-center justify-center '>
-      <div className='flex items-center justify-around'>
-        <AiOutlineTwitter className='m-2' />
-        <FaTelegram className='m-2' />
-        <div className='m-2'>Terms and Conditions</div>
-        <div className='m-2'> Privacy Policy</div>
+      <div className='flex items-center justify-between'>
+        <AiOutlineTwitter className='m-2 bg-black' />
+        <FaTelegram className='m-2 bg-black' />
+        <div className='m-2 text-slate-950'>Terms and Conditions</div>
+        <div className='m-2 text-slate-950'> Privacy Policy</div>
       </div>
     </div>
   );
