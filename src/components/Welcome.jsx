@@ -5,7 +5,7 @@ const Welcome = ({ setShowWelcome }) => {
   return (
     <div class='container min-w-screen min-h-4/5 flex justify-center'>
       <div class='content'>
-        <img class='background_img w-screen ' src={bgIMG} alt='bacground' />
+        <img class='background_img min-w-screen ' src={bgIMG} alt='bacground' />
 
         <span class='frame text_1'>
           Your assetts,
