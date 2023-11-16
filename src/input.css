@@ -65,7 +65,6 @@ video {
   font-size: 3vw;
   font-weight: 700;
   line-height: 1;
-  filter: blur(0.2px);
   white-space: nowrap;
   color: white;
 }
@@ -77,7 +76,6 @@ video {
   font-weight: 400;
   line-height: 1.1;
   color: white;
-  filter: blur(0.2px);
   text-shadow: 0 0 2px #5a8596;
   text-align: start;
 }
@@ -88,7 +86,6 @@ video {
   font-weight: 600;
   line-height: 1;
   color: white;
-  filter: blur(0.2px);
   text-align: center;
   display: flex;
   align-items: center;
@@ -112,7 +109,6 @@ video {
   font-weight: 700;
   line-height: 1;
   color: white;
-  filter: blur(0.2px);
   word-spacing: 1rem;
 }
 
@@ -140,8 +136,6 @@ video {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-
-  filter: blur(0.4px);
 
   width: 20%;
   height: 70%;
@@ -223,7 +217,6 @@ video {
     font-size: 7vw;
     font-weight: 700;
     line-height: 1;
-    filter: blur(0.2px);
     white-space: nowrap;
     color: white;
   }
@@ -231,11 +224,10 @@ video {
     top: 35%;
     left: 28.8%;
     max-width: 17%;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 400;
     line-height: 1.1;
     color: white;
-    filter: blur(0.2px);
     text-shadow: 0 0 2px #5a8596;
     text-align: start;
   }
@@ -246,7 +238,6 @@ video {
     font-weight: 600;
     line-height: 1;
     color: white;
-    filter: blur(0.2px);
     text-align: center;
     display: flex;
     align-items: center;
@@ -266,17 +257,16 @@ video {
   .text_5 {
     top: 10.5%;
     right: 21%;
-    font-size: 2vw;
+    font-size: vw;
     font-weight: 700;
     line-height: 1;
     color: white;
-    filter: blur(0.2px);
     word-spacing: 1rem;
   }
 
   .links_div {
     position: absolute;
-    top: 65%;
+    top: 75%;
     left: 28.5%;
 
     height: 19%;
@@ -298,8 +288,6 @@ video {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-
-    filter: blur(0.4px);
 
     width: 20%;
     height: 70%;
