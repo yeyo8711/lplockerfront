@@ -53,7 +53,7 @@ const Homepage = () => {
     RenderComponent = ViewOneLock;
   }
   return (
-    <div className='flex flex-col items-center justify-start  bg-storm p-6 min-h-[90vh] mt-10'>
+    <div className='flex flex-col items-center justify-start max-w-screen bg-storm p-6 min-h-[90vh] mt-10'>
       <div
         className='flex items-center mb-5 '
         style={{ backgroundImage: "url(background)" }}>

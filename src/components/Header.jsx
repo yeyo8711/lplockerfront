@@ -73,8 +73,8 @@ function Header() {
   };
 
   return (
-    <div className='max-w-[100%]'>
-      <div className='flex justify-between items-center mx-auto'>
+    <div className='max-w-screen'>
+      <div className='flex justify-between items-center '>
         <h1 className='text-2xl text-soft-grey m-2'>Liquidity Locker</h1>
         {isConnected ? (
           <span className='text-slate-950 bg-jean p-2 m-2 rounded-md bg-custom-gradient'>

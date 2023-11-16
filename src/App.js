@@ -22,7 +22,7 @@ function App() {
   }, []);
 
   return (
-    <div className='flex flex-col justify-center w-screen min-h-fit items-center'>
+    <div className='flex flex-col justify-center max-w-screen min-h-fit items-center'>
       {showWelcome ? (
         <Welcome setShowWelcome={setShowWelcome} />
       ) : (
