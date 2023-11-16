@@ -29,8 +29,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  min-width: 100vw;
+  height: 80vh;
   overflow: hidden;
 }
 
