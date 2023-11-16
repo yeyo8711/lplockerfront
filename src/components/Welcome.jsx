@@ -3,7 +3,7 @@ import bgIMG from "../assets/img/img_background.jpg";
 
 const Welcome = ({ setShowWelcome }) => {
   return (
-    <div class='container min-w-screen min-h-4/5 flex justify-center'>
+    <div class='container min-w-[100vw] min-h-[80vh] flex justify-center'>
       <div class='content'>
         <img class='background_img min-w-screen ' src={bgIMG} alt='bacground' />
 
