@@ -3,9 +3,13 @@ import bgIMG from "../assets/img/img_background.jpg";
 
 const Welcome = ({ setShowWelcome }) => {
   return (
-    <div class='container '>
+    <div class='container min-w-screen min-h-3/4 flex justify-center'>
       <div class='content'>
-        <img class='background_img ' src={bgIMG} alt='bacground' />
+        <img
+          class='background_img w-screen h-max'
+          src={bgIMG}
+          alt='bacground'
+        />
 
         <span class='frame text_1'>
           Your assetts,

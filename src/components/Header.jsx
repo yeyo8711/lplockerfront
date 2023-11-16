@@ -73,11 +73,11 @@ function Header() {
   };
 
   return (
-    <div className='w-full p-4 '>
+    <div className='max-w-[100%]'>
       <div className='flex justify-between items-center mx-auto'>
-        <h1 className='text-2xl text-soft-grey'>Liquidity Locker</h1>
+        <h1 className='text-2xl text-soft-grey m-2'>Liquidity Locker</h1>
         {isConnected ? (
-          <span className='text-slate-950 bg-jean p-2 rounded-md bg-custom-gradient'>
+          <span className='text-slate-950 bg-jean p-2 m-2 rounded-md bg-custom-gradient'>
             {walletAddress.slice(-8)}
           </span>
         ) : (

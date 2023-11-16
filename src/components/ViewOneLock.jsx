@@ -108,7 +108,7 @@ const ViewOneLock = () => {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center h-full my-10'>
+    <div className='flex flex-col justify-start items-center h-full '>
       <div className='w-full max-w-lg flex justify-center items-center m-2'>
         <input
           type='text'

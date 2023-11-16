@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useStore from "../store";
 import { ethers } from "ethers";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaCaretLeft } from "react-icons/fa";
 import Datepicker from "react-tailwindcss-datepicker";
 import lockerContractABI from "../ABIs";
 import Swal from "sweetalert2";
@@ -214,10 +214,10 @@ function TokenInfo() {
   };
 
   return (
-    <div className='flex flex-colitems-center justify-center min-h-fit '>
-      <div className='bg-[#dfe4ec] p-6 mt-4 rounded-md'>
-        <div className='m-2 cursor-pointer'>
-          <FaArrowLeft onClick={() => goBack()} />
+    <div className='flex flex-colitems-center justify-center min-h-max '>
+      <div className='bg-[#dfe4ec] p-4 mt-2 rounded-md'>
+        <div className='m-2 cursor-pointer '>
+          <FaCaretLeft onClick={() => goBack()} className='bg-slate-950' />
         </div>
         <div className='flex items-center justify-center text-3xl text-slate-950'>
           {token0Name ? token0Name : ""} / {token1Name ? token1Name : ""}
@@ -326,7 +326,7 @@ function TokenInfo() {
           Fee Options
         </div>
         <div className='bg-[#E9EEF2] border-2 rounded-md p-3 m-3'>
-          <div className='flex flex-1 justify-center items-center m-2 bg-[#F5F7F9] rounded p-2'>
+          <div className='flex flex-1 justify-center items-center  bg-[#F5F7F9] rounded '>
             <button
               className='px-4 py-2 w-full h-full rounded transition duration-300 '
               style={{ backgroundImage: `url(${bgImage})` }}>
